@@ -3,7 +3,6 @@ using AppKit;
 using Foundation;
 using Prism;
 using Prism.Ioc;
-using Xamarin.Forms;
 using Xamarin.Forms.Platform.MacOS;
 
 namespace AudioRecoder.macOS
@@ -32,9 +31,9 @@ namespace AudioRecoder.macOS
         public override void DidFinishLaunching(NSNotification notification)
         {
             // Insert code here to initialize your application
-            Forms.Init();
+            global::Xamarin.Forms.Forms.Init();
 
-            LoadApplication(new App(new macOSInitializer()));
+            LoadApplication(new Forms.App(new macOSInitializer()));
 
             base.DidFinishLaunching(notification);
         }
@@ -42,6 +41,16 @@ namespace AudioRecoder.macOS
         public override void WillTerminate(NSNotification notification)
         {
             // Insert code here to tear down your application
+        }
+
+        public override bool ApplicationShouldHandleReopen(NSApplication sender, bool hasVisibleWindows)
+        {
+            if (!hasVisibleWindows && _window != null)
+            {
+                _window.IsVisible = true;
+            }
+
+            return true;
         }
     }
 
