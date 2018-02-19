@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace AudioRecoder
+namespace AudioRecoder.Forms.Views
 {
     public partial class AudioRecoderPage : ContentPage
     {

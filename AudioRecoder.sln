@@ -1,9 +1,11 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioRecoder", "AudioRecoder\AudioRecoder.csproj", "{3D1C11BA-F594-4FE4-8E9E-C56BF84F6251}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioRecoder.Forms", "AudioRecoder.Forms\AudioRecoder.Forms.csproj", "{3D1C11BA-F594-4FE4-8E9E-C56BF84F6251}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioRecoder.macOS", "AudioRecoder.macOS\AudioRecoder.macOS.csproj", "{B1F32E62-042B-4849-815F-44B995503152}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioRecoder.Core", "AudioRecoder.Core\AudioRecoder.Core.csproj", "{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,5 +41,17 @@ Global
 		{B1F32E62-042B-4849-815F-44B995503152}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{B1F32E62-042B-4849-815F-44B995503152}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{B1F32E62-042B-4849-815F-44B995503152}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Release|iPhone.Build.0 = Release|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{E17A269B-8BCC-45CE-9478-6A5C91ACC15F}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
