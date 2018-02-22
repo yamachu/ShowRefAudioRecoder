@@ -17,6 +17,8 @@ namespace AudioRecoder.Forms
         protected override void RegisterTypes(IContainerRegistry containterRegistry)
         {
             containterRegistry.RegisterForNavigation<Views.AudioRecoderPage, Core.ViewModels.AudioRecoderPageViewModel>();
+
+            containterRegistry.RegisterSingleton<Core.Services.IRecorderService, Core.Services.RecorderService>();
         }
 
         protected override void ConfigureViewModelLocator()
