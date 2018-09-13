@@ -1,4 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms" xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" prism:ViewModelLocator.AutowireViewModel="True" xmlns:local="clr-namespace:AudioRecoder.Forms" x:Class="AudioRecoder.Forms.Views.AudioRecoderPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms" xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" prism:ViewModelLocator.AutowireViewModel="True" xmlns:local="clr-namespace:AudioRecoder.Forms" x:Class="AudioRecoder.Forms.Views.AudioRecoderPage"
+             BackgroundColor="Silver" >
+    <FlexLayout Direction="Column" Margin="8,8,8,8">
+        <FlexLayout Direction="Row" FlexLayout.Grow="1">
+            <FlexLayout FlexLayout.Grow="2" Direction="Column" JustifyContent="SpaceBetween">
+                <StackLayout>
+                    <Label Text="Reference Wav Directory" />
+                    <FlexLayout JustifyContent="SpaceBetween">
+                        <Entry Text="ここがリファレンス" FlexLayout.Grow="1" Margin="0,0,10,0"/>
+                        <Button Text="Icon" />
+                    </FlexLayout>
+                </StackLayout>
 
+                <StackLayout>
+                    <Label Text="Label Directory" />
+                    <FlexLayout JustifyContent="SpaceBetween">
+                        <Entry Text="ここがラベル" FlexLayout.Grow="1" Margin="0,0,10,0"/>
+                        <Button Text="Icon" />
+                    </FlexLayout>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Record Wav Directory" />
+                    <FlexLayout JustifyContent="SpaceBetween">
+                        <Entry Text="ここが保存" FlexLayout.Grow="1" Margin="0,0,10,0"/>
+                        <Button Text="Icon" />
+                    </FlexLayout>
+                </StackLayout>
+            </FlexLayout>
+
+            <FlexLayout FlexLayout.Grow="1" JustifyContent="SpaceBetween" Direction="Column" Margin="10,0,0,0">
+                <StackLayout>
+                    <Label Text="InputDevice" />
+                    <Picker ItemsSource="{Binding Devices}" ItemDisplayBinding="{Binding Info.Name}" SelectedIndex="{Binding SelectedDeviceIndex.Value}"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="SamplingRate" />
+                    <Picker ItemsSource="{Binding SamplingRates}" SelectedItem="{Binding SelectedSamplingRate.Value}"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Channel" />
+                    <Picker ItemsSource="{Binding Channels}" SelectedItem="{Binding SelectedChannel.Value}"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="BitDepth" />
+                    <Picker ItemsSource="{Binding BitDepths}" SelectedItem="{Binding SelectedBitDepth.Value}"/>
+                </StackLayout>
+            </FlexLayout>
+        </FlexLayout>
+
+        <StackLayout>
+            <FlexLayout JustifyContent="SpaceBetween">
+                <Label Text="ここにファイルの名前とか" FlexLayout.Grow="1"/>
+                <Label Text="分子 / 分母" />
+            </FlexLayout>
+
+            <Entry Text="ここにラベルの中身" IsEnabled="false" Margin="0,0,0,10"/>
+            
+            <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
+                <Button Text="Prev" FlexLayout.Basis="80" Margin="0,0,8,0"/>
+                <Button Text="Play Ref" FlexLayout.Grow="1"/>
+                <Button Text="{Binding RecordStartButtonText.Value}" Command="{Binding RecordStartCommand}" FlexLayout.Grow="1.2" Margin="10,0,10,0"/>
+                <Button Text="Play Own" FlexLayout.Grow="1"/>
+                <Button Text="Next" FlexLayout.Basis="80" Margin="8,0,0,0"/>
+            </FlexLayout>
+        </StackLayout>
+    </FlexLayout>
 </ContentPage>
